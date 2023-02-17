@@ -1,4 +1,4 @@
-package com.test;
+package email;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -9,13 +9,11 @@ import javafx.stage.Stage;
 public class Launcher extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Button button = new Button();
-        button.setText("Hello");
+        Button button = new Button("Click");
+        button.setOnAction(e -> System.out.println("Button clicked"));
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(button);
-
         Scene scene = new Scene(stackPane, 300, 300);
-        stage.setTitle("Email Client");
         stage.setScene(scene);
         stage.show();
     }

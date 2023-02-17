@@ -4,5 +4,5 @@ module JavaFxEmailClient {
     requires javafx.graphics;
     requires javafx.web;
 
-    opens com.test;
+    opens email;
 }
