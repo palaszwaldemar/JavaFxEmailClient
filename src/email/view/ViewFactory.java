@@ -4,6 +4,7 @@ import email.EmailManager;
 import email.controller.BaseController;
 import email.controller.LoginWindowController;
 import email.controller.MainWindowController;
+import email.controller.OptionsWindowController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,16 +20,23 @@ public class ViewFactory {
     }
 
     public void showLoginWindow() {
-        System.out.println("show login window called");
+        System.out.println("login window called");
 
         BaseController controller = new LoginWindowController(emailManager, this, "LoginWindow.fxml");
         initializeStage(controller);
     }
 
     public void showMainWindow() {
-        System.out.println("show main window called");
+        System.out.println("main window called");
 
         BaseController controller = new MainWindowController(emailManager, this, "MainWindow.fxml");
+        initializeStage(controller);
+    }
+
+    public void showOptionsWindow() {
+        System.out.println("options window called");
+
+        BaseController controller = new OptionsWindowController(emailManager, this, "OptionsWindow.fxml");
         initializeStage(controller);
     }
 
