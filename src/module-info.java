@@ -6,4 +6,5 @@ module JavaFxEmailClient {
 
     opens email;
     opens email.view;
+    opens email.controller;
 }
